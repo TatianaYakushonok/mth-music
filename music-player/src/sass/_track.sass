@@ -1,0 +1,50 @@
+.track
+    padding: 0.6rem
+    border: 0.2rem solid transparent
+    background: transparent
+    border-radius: 2rem
+    transition: opacity .3s ease-in-out
+    &:hover .track__img_wrap::after
+        background-image: url('../icons/play.svg')
+        opacity: 1
+    &_active
+        border: 0.2rem solid #fff
+        background: rgba(255, 255, 255, 0.5)
+        transition: bacground-color .3s ease-in-out
+    &__img_wrap
+        position: relative
+        line-height: 0
+        border-radius: 1.2rem 1.2rem 0 0
+        overflow: hidden
+        &::after
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: 3.6rem
+            height: 3.6rem
+            content: ''
+            display: block
+            background-color: rgba(255, 255, 255, .8)
+            border-radius: 50%
+            background-image: url('../icons/pause.svg')
+            background-position: center
+            background-repeat: no-repeat
+            opacity: 0
+            transition: opacity .3s ease-in-out
+    &_active .track__img_wrap::after
+        opacity: 1
+    &_active:hover .track__img_wrap::after
+        background-image: url('../icons/play.svg')
+        background-color: #fff
+    &__info
+        padding: 1.4rem 0.8rem
+        text-align: left
+        border-radius: 0 0 1.2rem 1.2rem
+        background-color: #fff
+    &__title
+        margin-bottom: 0.2rem
+        font-weight: 600
+    &__artist
+        font-weight: 300
+        font-size: 1.4rem
