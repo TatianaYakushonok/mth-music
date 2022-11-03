@@ -1,0 +1,134 @@
+.player
+    max-width: 122.8rem
+    position: fixed
+    left: 0
+    right: 0
+    bottom: -100%
+    background: rgba(255, 255, 255, 0.7)
+    backdrop-filter: blur(0.6rem)
+    border-radius: 2rem
+    margin: 0 auto
+    padding: 2.4rem
+    transition: bottom .5s ease
+    &_active
+        bottom: 2.6rem
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr 3fr 1fr
+        align-items: center
+        gap: 2rem
+    &__title
+        font-weight: 600
+        margin-bottom: 0.3rem
+    &__artist
+        font-weight: 300
+        font-size: 1.4rem
+    &__control
+        display: flex
+        align-items: center
+        gap: 1.5rem
+    &__icon
+        width: 2.4rem
+        height: 2.4rem
+        display: block
+        background-position: center
+        background-repeat: no-repeat
+    &__icon_stop
+        background-image: url('../icons/stop.svg')
+        transition: transform .3s ease-in-out
+        &:hover
+            transform: scale(1.2)
+    &__icon_prev
+        background-image: url('../icons/fast-rewind.svg')
+        transition: transform .3s ease-in-out
+        &:hover
+            transform: scale(1.2)
+    &__icon_pause
+        background-image: url('../icons/pause.svg')
+        transition: transform .3s ease-in-out
+        &:hover
+            transform: scale(1.2)
+    &__icon_play
+        background-image: url('../icons/play.svg')
+        transition: transform .3s ease-in-out
+        &:hover
+            transform: scale(1.2)
+    &__icon_next
+        background-image: url('../icons/fast-forward.svg')
+        transition: transform .3s ease-in-out
+        &:hover
+            transform: scale(1.2)
+    &__icon_like
+        background-image: url('../icons/favorite.svg')
+        transition: background-image .3s ease-in-out
+        &:hover
+            background-image: url('../icons/favorite-hover.svg')
+            transform: scale(1.2)
+    &__progress_wrap
+        display: flex
+        align-items: center
+        gap: 1.6rem
+        padding-right: 0.9rem
+    &__progress
+        flex-grow: 1
+        max-width: 48.7rem
+    &__progress_input
+        width: 100%
+        padding: 0.9rem 0
+        background-color: transparent
+        appearance: none
+        cursor: pointer
+        &::-webkit-slider-runnable-track
+            height: 0.6rem
+            background-color: #1E5A32
+            border: none
+            border-radius: 2rem
+        &::-webkit-slider-thumb
+            width: 1.2rem
+            height: 2.4rem
+            margin-top: -0.9rem
+            background-color: #fff
+            box-shadow: 0px 0px 0.2rem rgba(0, 0, 0, 0.25)
+            border-radius: 3rem
+            appearance: none
+            transition: transform .3s ease-in-out
+        &:hover::-webkit-slider-thumb,
+        &:focus::-webkit-slider-thumb
+            transform: scale(1.2)
+    &__time
+        display: flex
+        gap: 0.4rem
+        font-size: 1.4rem
+    &__volume_wrap
+        display: flex
+        align-items: center
+        gap: 1rem
+    &__volume
+        max-width: 14.6rem
+        height: 2.4rem
+    &__volume_input
+        width: 100%
+        background-color: transparent
+        appearance: none
+        cursor: pointer
+        &::-webkit-slider-thumb
+            width: 1.2rem
+            height: 2.4rem
+            background-color: #fff
+            box-shadow: 0px 0px 0.2rem rgba(0, 0, 0, 0.25)
+            border-radius: 3rem
+            appearance: none
+            transition: transform .3s ease-in-out
+        &::-webkit-slider-runnable-track
+            clip-path: polygon(100% 20%, 1% 55%, 100% 78%)
+            height: 2.4rem
+            border: none
+            background-color: #757575
+    &__icon_mute
+        background-image: url('../icons/mute.svg')
+        transition: background-image, transform .3s ease-in-out
+        &:hover
+            background-image: url('../icons/mute-off.svg')
+            transform: scale(1.2)
+    &__icon_mute_off
+        background-image: url('../icons/mute-off.svg')
