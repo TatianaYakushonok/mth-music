@@ -6,11 +6,26 @@
         padding: 0 5rem
         display: flex
         align-items: center
+        gap: 5rem
+        @include respond(tab-land)
+            padding: 0 2.2rem
+        @include respond(tab-port)
+            padding: 0 9.4rem
+            gap: 2rem
+        @include respond(phone)
+            padding: 0 1.5rem
+            flex-wrap: wrap
     &__logo
-        margin-right: 9.4rem
+        margin-right: 4.4rem
+        @include respond(tab-port)
+            margin-right: 1.7rem
+        @include respond(phone)
+            margin-right: auto
     &__search
         margin-right: auto
         flex-grow: 1
+        @include respond(phone)
+            order: 2
     &__favorite_btn
         line-height: 0
         color: #fff

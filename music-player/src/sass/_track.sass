@@ -4,6 +4,9 @@
     background: transparent
     border-radius: 2rem
     transition: opacity .3s ease-in-out
+    @include respond(phone)
+        padding: 0.4rem
+        border-radius: 1.4rem
     &:hover .track__img_wrap::after
         background-image: url('../icons/play.svg')
         opacity: 1
@@ -42,9 +45,17 @@
         text-align: left
         border-radius: 0 0 1.2rem 1.2rem
         background-color: #fff
+        flex-grow: 1
+        @include respond(phone)
+            padding: 0.8rem
     &__title
         margin-bottom: 0.2rem
         font-weight: 600
+        @include respond(phone)
+            font-size: 1.4rem
+            margin-bottom: 0.4rem
     &__artist
         font-weight: 300
         font-size: 1.4rem
+        @include respond(phone)
+            font-size: 1.2rem
