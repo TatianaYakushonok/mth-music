@@ -69,4 +69,10 @@ gulp.task('images', function () {
         .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+gulp.task('audio', function () {
+    return gulp.src("src/audio/**/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("dist/audio"));
+});
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'audio'));

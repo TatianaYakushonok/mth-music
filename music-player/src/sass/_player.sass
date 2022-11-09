@@ -44,7 +44,7 @@
     &__info
         @include respond(phone)
             text-align: center
-    &__title
+    &__info_title
         font-weight: 600
         margin-bottom: 0.3rem
     &__artist
@@ -93,6 +93,9 @@
         &:hover
             background-image: url('../icons/favorite-hover.svg')
             transform: scale(1.2)
+    &__icon_like_active
+        background-image: url('../icons/favorite-hover.svg')
+        filter: drop-shadow(0, 0, 0.2rem, tomato)
     &__progress_wrap
         display: flex
         align-items: center

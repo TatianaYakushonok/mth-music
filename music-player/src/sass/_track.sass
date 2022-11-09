@@ -36,7 +36,13 @@
             opacity: 0
             transition: opacity .3s ease-in-out
     &_active .track__img_wrap::after
+        background-image: url('../icons/pause.svg')
         opacity: 1
+    &_pause .track__img_wrap::after
+        background-image: url('../icons/play.svg')
+        opacity: 1
+    /*&_active:focus .track__img_wrap::after
+     background-image: url('../icons/pause.svg')
     &_active:hover .track__img_wrap::after
         background-image: url('../icons/play.svg')
         background-color: #fff
